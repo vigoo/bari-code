@@ -1,0 +1,80 @@
+{
+	"name": "bari",
+	"displayName": "bari",
+	"description": "Support for the bari build management tool",
+	"version": "0.0.1",
+	"publisher": "vigoo",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Build"
+	],
+	"activationEvents": [
+		"onCommand:bari.build",
+		"onCommand:bari.test",
+		"onCommand:bari.vs",
+		"onCommand:bari.openSuiteYaml",
+		"onCommand:bari.selfUpdate",
+		"onCommand:bari.goal.changeCurrentGoal",
+		"onCommand:bari.goal.changeCurrentProduct",
+		"workspaceContains:suite.yaml"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"title": "bari configuration",
+			"type": "object",
+			"properties": {
+				"bari.commandLine": {
+					"type": "string",
+					"default": "bari",
+					"description": "Command line to execute bari"
+				},
+				"bari.verboseOutput": {
+					"type": "boolean",
+					"default": false,
+					"description": "Turns on verbose output for all the executed bari commands"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "bari.build",
+				"title": "bari: Build"
+			},
+			{
+				"command": "bari.test",
+				"title": "bari: Test"
+			},
+			{
+				"command": "bari.vs",
+				"title": "bari: Regenerate solution"
+			},
+			{
+				"command": "bari.openSuiteYaml",
+				"title": "bari: Open suite.yaml"
+			},
+			{
+				"command": "bari.selfUpdate",
+				"title": "bari: Update self"
+			},
+			{
+				"command": "bari.goal.changeCurrentGoal",
+				"title": "bari: Change goal"
+			},
+			{
+				"command": "bari.product.changeCurrentProduct",
+				"title": "bari: Change target product"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "0.10.x"
+	}
+}
