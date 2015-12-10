@@ -8,7 +8,7 @@
 		"vscode": "^0.10.1"
 	},
 	"categories": [
-		"Build"
+		"Other"
 	],
 	"activationEvents": [
 		"onCommand:bari.build",
@@ -76,5 +76,10 @@
 	"devDependencies": {
 		"typescript": "^1.6.2",
 		"vscode": "0.10.x"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vigoo/bari-code"
+	},
+	"license": "Apache-2.0"
 }
