@@ -3,7 +3,7 @@
 	"displayName": "bari build management",
 	"description": "Support for the bari build management tool",
 	"icon": "images/logo_small.png",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "vigoo",
 	"engines": {
 		"vscode": "^0.10.1"
