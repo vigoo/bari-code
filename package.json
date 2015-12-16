@@ -1,7 +1,8 @@
 {
 	"name": "bari",
-	"displayName": "bari",
+	"displayName": "bari build management",
 	"description": "Support for the bari build management tool",
+	"icon": "images/logo_small.png",
 	"version": "0.0.1",
 	"publisher": "vigoo",
 	"engines": {
